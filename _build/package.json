@@ -1,0 +1,15 @@
+{
+    "name": "ESPE-HTML5-Application",
+    "version": "0.1.0",
+    "description": "ESPE Dental Products and Procedures HTML5 Web Application",
+    "url": "",
+    "developedBy": "Nerdery (Robert S.)",
+
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "matchdep": "~0.1.2",
+
+        "grunt-contrib-uglify": "~0.2.2",
+        "grunt-typescript": "~0.2.2"
+    }
+}
