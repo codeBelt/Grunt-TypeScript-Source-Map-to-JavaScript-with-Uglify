@@ -1,9 +1,9 @@
 {
-    "name": "ESPE-HTML5-Application",
+    "name": "HTML5-Application",
     "version": "0.1.0",
-    "description": "ESPE Dental Products and Procedures HTML5 Web Application",
+    "description": "The Description",
     "url": "",
-    "developedBy": "Nerdery (Robert S.)",
+    "developedBy": "codeBelt",
 
     "devDependencies": {
         "grunt": "~0.4.1",
