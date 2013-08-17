@@ -25,4 +25,4 @@ var Man = (function (_super) {
     };
     return Man;
 })(Person);
-//@ sourceMappingURL=main.js.map
+//# sourceMappingURL=main.js.map
