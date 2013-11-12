@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 options: {
                     sourceMap: '../js/main.min.map',
                     sourceMapIn: '../js/main.js.map',
-                    sourceMappingURL: 'scripts.js.map',
+                    sourceMappingURL: 'main.js.map',
                     sourceMapRoot: '../ts'
                 },
                 files: {
@@ -38,6 +38,6 @@ module.exports = function(grunt) {
 
     grunt.file.setBase('../ts');
 
-    grunt.registerTask('default', ['typescript:base', 'uglify:dist']);
+    grunt.registerTask('default', ['typescript', 'uglify:dist']);
 
 };
