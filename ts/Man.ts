@@ -1,14 +1,23 @@
-///<reference path='Person.ts'/>
+///<reference path='anothernamespace/Person.ts'/>
 
-class Man extends Person {
+module mynamespace
+{
+    import Person = anothernamespace.Person;
 
-    constructor(name:string, age:number) {
-        super(name, age);
+    export class Man extends Person
+    {
+
+        constructor(name:string, age:number)
+        {
+            super(name, age);
+        }
+
+        public getDescription():string
+        {
+            var originalDescription:string = super.getDescription();
+            return originalDescription + " and is a man";
+        }
+
     }
-
-    public getDescription():string {
-        var originalDescription:string = super.getDescription();
-        return originalDescription + " and is a man";
-    }
-
 }
+

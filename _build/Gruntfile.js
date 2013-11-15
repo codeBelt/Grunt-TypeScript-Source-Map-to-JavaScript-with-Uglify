@@ -10,19 +10,6 @@ module.exports = function(grunt) {
         // to the project name and version number.
         pkg: grunt.file.readJSON('package.json'),
 
-        uglify: {
-            dist: {
-                options: {
-                    sourceMap: '../js/main.min.map',
-                    sourceMapIn: '../js/main.js.map',
-                    sourceMappingURL: 'main.js.map',
-                    sourceMapRoot: '../ts'
-                },
-                files: {
-                    '../js/main.min.js': ['../js/main.js']
-                }
-            }
-        },
         typescript: {
             base: {
                 src: ['../ts/Man.ts'],
@@ -32,12 +19,24 @@ module.exports = function(grunt) {
                     declaration: false
                 }
             }
+        },
+
+        uglify: {
+            dist: {
+                options: {
+                    sourceMap: '../js/main.min.map',
+                    sourceMapIn: '../js/main.js.map',
+                    //sourceMappingURL: '../js/main.min.map',
+                    sourceMapRoot: '../ts/'
+                },
+                files: {
+                    '../js/main.min.js': ['../js/main.js']
+                }
+            }
         }
 
     });
 
-    grunt.file.setBase('../ts');
-
-    grunt.registerTask('default', ['typescript', 'uglify:dist']);
+    grunt.registerTask('default', ['typescript', 'uglify']);
 
 };
