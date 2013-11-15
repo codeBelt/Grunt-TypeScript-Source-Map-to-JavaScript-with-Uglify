@@ -24,9 +24,11 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    sourceMap: '../js/main.min.map',
+                    // Reference to the source map TypeScript created.
                     sourceMapIn: '../js/main.js.map',
-                    //sourceMappingURL: '../js/main.min.map',
+                    // Creates our new source map after minifying.
+                    sourceMap: '../js/main.min.map',
+                    // The root folder where the TypeScript live.
                     sourceMapRoot: '../ts/'
                 },
                 files: {
